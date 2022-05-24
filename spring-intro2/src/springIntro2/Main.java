@@ -8,7 +8,7 @@ public class Main {
 		ClassPathXmlApplicationContext context= new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		DatabaseManager db=new DatabaseManager(context.getBean("postgresql",IDatabaseDal.class));
-		db.create();
+		db.cremoduleate();
 		
 		DatabaseManager mongo=new DatabaseManager(context.getBean("mongodb",IDatabaseDal.class));
 		mongo.create();
