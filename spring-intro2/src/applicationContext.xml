@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	 <bean id="postgresql" class="springIntro2.PostgreSQLDal"></bean>
+	 <bean id="mongodb" class="springIntro2.MongoDbDal"></bean>
+	 <bean id="mssql" class="springIntro2.MsSqlDal"></bean>
+	 <bean id="mongoManagerService" class="springIntro2.DatabaseManager">
+	 	<constructor-arg ref="mongodb"></constructor-arg>
+	 </bean>
+	 <bean id="mongoService" class="springIntro2.MongoDbManager">
+	 	<constructor-arg ref="mongodb"></constructor-arg>
+	 </bean>
+</beans>
