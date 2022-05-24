@@ -1,0 +1,11 @@
+command=/usr/lib/jvm/java-11-openjdk-amd64/bin/javadoc
+content_assist_proposals_background=41,53,59
+content_assist_proposals_foreground=207,216,220
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.formatterprofiles.version=22
+spelling_locale_initialized=true
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true
