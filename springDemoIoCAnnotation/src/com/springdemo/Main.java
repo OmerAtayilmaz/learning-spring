@@ -9,6 +9,8 @@ public class Main {
 //		Not Refreshed hatasınde kullanılır: context.refresh();
 		ICustomerDal customerDal=context.getBean("database",ICustomerDal.class);
 		customerDal.add();
+		ICustomerDal oracle=context.getBean("oracledb",ICustomerDal.class);
+		oracle.add();
 	
 	}
 	//IOC - Inversion of Control
