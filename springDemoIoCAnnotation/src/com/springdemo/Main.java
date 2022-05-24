@@ -12,6 +12,9 @@ public class Main {
 		ICustomerDal oracle=context.getBean("oracledb",ICustomerDal.class);
 		oracle.add();
 	
+		ICustomerService customer=context.getBean("service",ICustomerService.class);
+		customer.add();
+		
 	}
 	//IOC - Inversion of Control
 	//DEPENDENCY INJECTION
