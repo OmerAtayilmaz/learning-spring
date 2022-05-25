@@ -46,7 +46,8 @@ public class HibernateProductDal implements IProductDal{
     @Transactional
     public void delete(Product product) {
         Session session=entityManager.unwrap(Session.class);
-        session.delete(product);
+        Product productToDelete=session.get(Product.class,product.getProduct_id());
+        session.delete(productToDelete);
     }
 
     @Override

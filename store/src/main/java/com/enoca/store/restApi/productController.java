@@ -22,8 +22,8 @@ public class productController {
         this.productService = productService;
     }
     //GET ALL DATA
-    @GetMapping("/one")
-    public Product getOne(Long id) {
+    @GetMapping("/{id}")
+    public Product getOne(@PathVariable Long id) {
         return (productService.getById(id));
     }
     //GET ALL DATA
@@ -32,27 +32,23 @@ public class productController {
         return (productService.getAll());
     }
     //CREATE PRODUCT
-    @PostMapping("/create")
-    public ResponseEntity<String> create() {
-        Product product=new Product(20l,"xxx",7l,25l,25);
-        productService.add(product);
+    @PostMapping("/add")
+    public ResponseEntity<String> create(@RequestBody Product product) {
+        Product temp=new Product(null,product.getProduct_name(), product.getCategory_id(), product.getPrice(),product.getQuantity());
+        productService.add(temp);
         return ResponseEntity.ok("Success");
     }
 
     //UPDATE PRODUCT
     @PostMapping("/update")
-    public ResponseEntity<String> update() {
-        Product product=new Product(20l,"xxx",7l,25l,25);
-
+    public ResponseEntity<String> update(@RequestBody Product product) {
         productService.update(product);
         return ResponseEntity.ok("Success");
     }
 
     //GET ALL DATA
-    @DeleteMapping("/delete")
-    public ResponseEntity<String> delete() {
-        Product product=new Product(20l,"xxx",7l,25l,25);
-
+    @PostMapping("/delete")
+    public ResponseEntity<String> delete(@RequestBody Product product) {
         productService.delete(product);
         return ResponseEntity.ok("Success");
     }
