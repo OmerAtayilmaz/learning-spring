@@ -26,18 +26,24 @@ public class ProductService implements IProductService{
     @Override
     @Transactional
     public void add(Product product) {
-
+        this.productDal.add(product);
     }
 
     @Override
     @Transactional
     public void update(Product product) {
-
+        this.productDal.update(product);
     }
 
     @Override
     @Transactional
     public void delete(Product product) {
+        this.productDal.delete(product);
+    }
 
+    @Override
+    @Transactional
+    public Product getById(Long id) {
+        return this.productDal.getById(id);
     }
 }

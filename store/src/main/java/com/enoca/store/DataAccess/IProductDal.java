@@ -9,4 +9,5 @@ public interface IProductDal {
     void add(Product product);
     void update(Product product);
     void delete(Product product);
+    Product getById(Long id);
 }

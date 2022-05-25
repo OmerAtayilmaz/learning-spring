@@ -30,18 +30,29 @@ public class HibernateProductDal implements IProductDal{
     @Override
     @Transactional
     public void add(Product product) {
-
+        Session session=entityManager.unwrap(Session.class);
+        session.save(product);
     }
+
 
     @Override
     @Transactional
     public void update(Product product) {
-
+        Session session=entityManager.unwrap(Session.class);
+        session.saveOrUpdate(product);
     }
 
     @Override
     @Transactional
     public void delete(Product product) {
+        Session session=entityManager.unwrap(Session.class);
+        session.delete(product);
+    }
 
+    @Override
+    public Product getById(Long id) {
+        Session session=entityManager.unwrap(Session.class);
+        Product product=session.get(Product.class,id);
+        return product;
     }
 }
