@@ -3,42 +3,44 @@ package com.enoca.store.DataAccess;
 import com.enoca.store.Entity.Product;
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import java.util.List;
 
-//JPA - ORM
-public class HibernateProductDal implements IProductDal{
 
+@Repository
+public class HibernateProductDal implements IProductDal{
     private EntityManager entityManager;
 
     @Autowired
     public HibernateProductDal(EntityManager entityManager) {
-        this.entityManager = entityManager;
+        this.entityManager=entityManager;
     }
 
     @Override
-    @Transactional //springden import edilmelidir  -AOP ASPECT ORIENTED PROGRAMMING  araştır-
+    @Transactional//AOP - Aspect ORiented Programming
     public List<Product> getAll() {
-
-        //org.hibernate.session adresinden gelmelidir!
-       Session session= entityManager.unwrap(Session.class);
-       List<Product> productList=session.createQuery("from Product",Product.class).getResultList();
+        Session session=entityManager.unwrap(Session.class);
+        List<Product> productList=session.createQuery("from Product",Product.class).getResultList();
         return  productList;
     }
 
     @Override
+    @Transactional
     public void add(Product product) {
 
     }
 
     @Override
+    @Transactional
     public void update(Product product) {
 
     }
 
     @Override
+    @Transactional
     public void delete(Product product) {
 
     }

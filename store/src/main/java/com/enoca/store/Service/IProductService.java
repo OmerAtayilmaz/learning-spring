@@ -1,6 +1,9 @@
-package com.enoca.store.Business;
+package com.enoca.store.Service;
+
 import com.enoca.store.Entity.Product;
+
 import java.util.List;
+
 public interface IProductService {
     List<Product> getAll();
     void add(Product product);

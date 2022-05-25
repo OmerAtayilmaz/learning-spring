@@ -1,7 +1,6 @@
 package com.enoca.store.Entity;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 @Table(name="products")

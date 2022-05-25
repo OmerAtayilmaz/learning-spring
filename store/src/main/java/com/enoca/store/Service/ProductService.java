@@ -1,4 +1,4 @@
-package com.enoca.store.Business;
+package com.enoca.store.Service;
 
 import com.enoca.store.DataAccess.IProductDal;
 import com.enoca.store.Entity.Product;
@@ -7,17 +7,16 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-
 @Service
-public class ProductManager implements IProductService{
-    //BUsiness data accessten veri alır
+public class ProductService implements IProductService{
+
 
     private IProductDal productDal;
-
     @Autowired
-    public ProductManager(IProductDal productDal){
-        this.productDal=productDal;
+    public ProductService(IProductDal productDal) {
+        this.productDal = productDal;
     }
+
     @Override
     @Transactional
     public List<Product> getAll() {
@@ -37,6 +36,7 @@ public class ProductManager implements IProductService{
     }
 
     @Override
+    @Transactional
     public void delete(Product product) {
 
     }
