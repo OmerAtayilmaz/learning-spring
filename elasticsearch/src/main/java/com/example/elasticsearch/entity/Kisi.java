@@ -1,4 +1,4 @@
-package com.haydikodlayalim.entity;
+package com.example.elasticsearch.entity;
 
 import java.util.Date;
 import lombok.AllArgsConstructor;
@@ -10,7 +10,7 @@ import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
-@Document(indexName = "kisiler", type = "kisi")
+@Document(indexName = "kisiler")
 @Getter
 @Setter
 @NoArgsConstructor

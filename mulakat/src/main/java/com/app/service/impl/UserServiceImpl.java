@@ -53,6 +53,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public void update() {
+
+    }
+
+    @Override
     public List<UserDto> getAll() {
         List<User> userList=userRepository.findAll();
         List<UserDto> userDtos=new ArrayList<>();

@@ -1,6 +1,6 @@
-package com.haydikodlayalim.repository;
+package com.example.elasticsearch.repository;
 
-import com.haydikodlayalim.entity.Kisi;
+import com.example.elasticsearch.entity.Kisi;
 import java.util.List;
 import org.springframework.data.elasticsearch.annotations.Query;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;

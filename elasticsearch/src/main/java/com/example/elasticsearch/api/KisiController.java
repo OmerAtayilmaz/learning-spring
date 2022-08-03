@@ -1,8 +1,8 @@
-package com.haydikodlayalim.api;
+package com.example.elasticsearch.api;
 
 
-import com.haydikodlayalim.entity.Kisi;
-import com.haydikodlayalim.repository.KisiRepository;
+import com.example.elasticsearch.entity.Kisi;
+import com.example.elasticsearch.repository.KisiRepository;
 import java.util.Calendar;
 import java.util.List;
 import javax.annotation.PostConstruct;

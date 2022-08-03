@@ -1,14 +1,25 @@
+### SPRING BOOT
+
+# DEMO 🔥
 # SPRING BOOT
 ***
 ## DEMO 
     - temel yapılar islendi
     - CRUD operations yapildi
+
+# MULAKAT 🔥
 ***
 ## MULAKAT
     - Enocha mulakati icin yapıldı
+    - CORS Policy kullanıldı
+    - CRD operations yapıldı
+
+# MY-APP 🔥
 ***
 ## MY-APP
     - Test amaçlı bilgi ölçme amacıyla oluşturuldu
+    - CRUD operations Yapıldı
+# Elastich Search 🔍
 ****
 ## SPRING INTRO
  * eğitim sürecinde yaptığım proje
