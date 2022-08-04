@@ -6,14 +6,7 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args){
-        //güvenlik yok
-        ArrayList items=new ArrayList();
-        items.add(1);
-        items.add(2);
-        items.add(3);
-        items.add(4);
-        items.add("hello");
-        items.add(5);
+
 
         //tip güvenliği
         ArrayList<Integer> items2=new ArrayList();
@@ -24,6 +17,24 @@ public class Main {
        // items2.add("hello");
         items2.add(5);
         printDoubled(items2);
+
+        FootballPlayer joe=new FootballPlayer("Joe");
+        BaseballPlayer pat=new BaseballPlayer("Pat");
+        SoccerPlayer beckham=new SoccerPlayer("Beckham");
+
+        Team<FootballPlayer> adeliadeCrows=new Team<FootballPlayer>("Adelaide Crows");
+        adeliadeCrows.addPlayer(joe);
+       //ERROR: adeliadeCrows.addPlayer(pat);
+       //ERROR: adeliadeCrows.addPlayer(beckham);
+
+        Team<BaseballPlayer> baseballPlayerTeam=new Team<>("Chicago Cubs");
+        baseballPlayerTeam.addPlayer(pat);
+
+        System.out.println(adeliadeCrows.numPlayers());
+
+        ///
+        //Team<String> hataliKullanim=new Team<>("Chicago Cubs");
+        baseballPlayerTeam.addPlayer(pat);
     }
     public static void printDoubled(ArrayList arrayList){
         for (Object i:arrayList){
