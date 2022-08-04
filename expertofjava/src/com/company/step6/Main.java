@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args){
+        //güvenlik yok
         ArrayList items=new ArrayList();
         items.add(1);
         items.add(2);
@@ -14,7 +15,15 @@ public class Main {
         items.add("hello");
         items.add(5);
 
-        printDoubled(items);
+        //tip güvenliği
+        ArrayList<Integer> items2=new ArrayList();
+        items2.add(1);
+        items2.add(2);
+        items2.add(3);
+        items2.add(4);
+       // items2.add("hello");
+        items2.add(5);
+        printDoubled(items2);
     }
     public static void printDoubled(ArrayList arrayList){
         for (Object i:arrayList){
