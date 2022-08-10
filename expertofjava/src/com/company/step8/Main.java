@@ -9,6 +9,12 @@ public class Main {
         }else{
             System.out.println("Sorry seems already taken");
         }
+
+        if(theatre.reserveSeat("E01")){
+            System.out.println("PLEASE PAY");
+        }else{
+            System.out.println("Sorry  seems already taken");
+        }
         theatre.getSeats();
     }
 }
